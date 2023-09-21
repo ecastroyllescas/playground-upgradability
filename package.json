@@ -22,9 +22,13 @@
     "prettier-plugin-solidity": "^1.1.3"
   },
   "scripts": {
-    "deploy:hardhat": "npx hardhat run deploy/deployProxyOZ.js --network hardhat",
-    "deploy:goerli": "npx hardhat run deploy/deployProxyOZ.js --network goerli",
-    "update:hardhat": "npx hardhat run deploy/upgradeProxy.js --network hardhat",
-    "update:goerli": "npx hardhat run deploy/upgradeProxy.js --network goerli"
+    "deploy:transparent:hardhat": "npx hardhat run deploy/transparent/deployProxyOZ.js --network hardhat",
+    "deploy:transparent:goerli": "npx hardhat run deploy/transparent/deployProxyOZ.js --network goerli",
+    "update:transparent:hardhat": "npx hardhat run deploy/transparent/upgradeProxy.js --network hardhat",
+    "update:transparent:goerli": "npx hardhat run deploy/transparent/upgradeProxy.js --network goerli",
+    "deploy:UUPS:hardhat": "npx hardhat run deploy/UUPS/deployProxyOZ.js --network hardhat",
+    "deploy:UUPS:goerli": "npx hardhat run deploy/UUPS/deployProxyOZ.js --network goerli",
+    "update:UUPS:hardhat": "npx hardhat run deploy/UUPS/upgradeProxy.js --network hardhat",
+    "update:UUPS:goerli": "npx hardhat run deploy/UUPS/upgradeProxy.js --network goerli"
   }
 }
