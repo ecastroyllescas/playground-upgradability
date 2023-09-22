@@ -8,7 +8,11 @@ contract StorageContractUUPS is UUPSUpgradeable, OwnableUpgradeable {
 
     function initialize(uint256 _value) public initializer {
         value = value;
+
+        // Initialize libs
+        __Ownable_init();
     }
 
+    // Mandatory override for UUPS proxies
     function _authorizeUpgrade(address) internal override onlyOwner {}
 }

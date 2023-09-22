@@ -7,5 +7,8 @@ contract StorageContract is OwnableUpgradeable {
 
     function initialize(uint256 _value) public initializer {
         value = value;
+
+        // Initialize libs
+        __Ownable_init();
     }
 }

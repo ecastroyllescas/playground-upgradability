@@ -6,13 +6,22 @@ import "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol";
 contract StorageContractUUPSV2 is UUPSUpgradeable, OwnableUpgradeable {
     uint256 value;
 
+    // Storage variables only can be appended, do not modify or erase any storage variable if you are not sure!
+    // Also make sure to have exactly the same dependencies that uses the same storage slots
+
+    // All function can be modified, added or deleted
     function initialize(uint256 _value) public initializer {
         value = _value;
+
+        // Initialize libs
+        __Ownable_init();
     }
 
+    // Function added
     function setValue(uint256 _value) public {
         value = _value;
     }
 
+    // Mandatory override for UUPS proxies
     function _authorizeUpgrade(address) internal override onlyOwner {}
 }
