@@ -1,6 +1,5 @@
 require('dotenv').config();
-require('@nomiclabs/hardhat-waffle');
-require('@nomiclabs/hardhat-etherscan');
+require('@nomicfoundation/hardhat-toolbox');
 require('@openzeppelin/hardhat-upgrades');
 require('hardhat-dependency-compiler');
 
@@ -82,8 +81,8 @@ module.exports = {
                 count: 20,
             },
         },
-        goerli: {
-            url: process.env.GOERLI_PROVIDER ? process.env.GOERLI_PROVIDER : `https://goerli.infura.io/v3/${process.env.INFURA_PROJECT_ID}`,
+        sepolia: {
+            url: process.env.SEPOLIA_PROVIDER ? process.env.SEPOLIA_PROVIDER : `https://sepolia.infura.io/v3/${process.env.INFURA_PROJECT_ID}`,
             accounts: {
                 mnemonic: process.env.MNEMONIC || DEFAULT_MNEMONIC,
                 path: "m/44'/60'/0'/0",
@@ -148,7 +147,7 @@ module.exports = {
         apiKey: {
             polygonZKEVMTestnet: `${process.env.ETHERSCAN_ZKEVM_API_KEY}`,
             polygonZKEVMMainnet: `${process.env.ETHERSCAN_ZKEVM_API_KEY}`,
-            goerli: `${process.env.ETHERSCAN_API_KEY}`,
+            sepolia: `${process.env.ETHERSCAN_API_KEY}`,
             mainnet: `${process.env.ETHERSCAN_API_KEY}`,
         },
         customChains: [
