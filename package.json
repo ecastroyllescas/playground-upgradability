@@ -30,6 +30,10 @@
     "deploy:UUPS:hardhat": "npx hardhat run deploy/UUPS/deployProxyOZ.js --network hardhat",
     "deploy:UUPS:goerli": "npx hardhat run deploy/UUPS/deployProxyOZ.js --network goerli",
     "update:UUPS:hardhat": "npx hardhat run deploy/UUPS/upgradeProxy.js --network hardhat",
-    "update:UUPS:goerli": "npx hardhat run deploy/UUPS/upgradeProxy.js --network goerli"
+    "update:UUPS:goerli": "npx hardhat run deploy/UUPS/upgradeProxy.js --network goerli",
+    "deploy:transparent:localhost": "npx hardhat run deploy/transparent/deployProxyOZ.js --network localhost",
+    "update:transparent:localhost": "npx hardhat run deploy/transparent/upgradeProxy.js --network localhost",
+    "deploy:UUPS:localhost": "npx hardhat run deploy/UUPS/deployProxyOZ.js --network localhost",
+    "update:UUPS:localhost": "npx hardhat run deploy/UUPS/upgradeProxy.js --network localhost"
   }
 }
