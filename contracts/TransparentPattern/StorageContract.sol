@@ -10,7 +10,7 @@ contract StorageContract is OwnableUpgradeable {
     // you must initialize all the libs that required to!
     // Since the initialize function should be only called once, OZ has this modifier `initializer` just for this, remember to add it!
     function initialize(uint256 _value) public initializer {
-        value = value;
+        value = _value;
 
         // Initialize libs
         __Ownable_init();
